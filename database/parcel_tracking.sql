@@ -18,6 +18,3 @@ CREATE TABLE parcels (
     vehicle ENUM('รถยนต์', 'เครื่องบิน') NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
--- เพิ่มผู้ดูแลระบบ (password: admin123)
-INSERT INTO admins (username, password) VALUES ('admin', '$2y$10$EIX5UuBlqbfN4R3B7Hp9Z.BGdpSTUu96cAnldYjh7xXOAVlGorJSi');
