@@ -1,0 +1,555 @@
+/* style.css */
+
+/* รีเซ็ตค่าของ body และ html */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #f4f4f9;
+}
+
+/* จัดการให้เนื้อหาตั้งอยู่ตรงกลาง */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+/* การจัดเรียงใน header */
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* แบบฟอร์มค้นหาพัสดุ */
+.form-container {
+    margin-bottom: 20px;
+}
+
+/* input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 250px;
+    transition: border-color 0.3s ease;
+} */
+ 
+/* เปลี่ยนสีขอบเมื่อ focus */
+/* input[type="text"]:focus {
+    border-color: #4CAF50;
+} */
+
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #4CAF50; /* เปลี่ยนสีขอบเมื่อ focus */
+}
+
+/* ปุ่มเข้าสู่ระบบ */
+.login-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+}
+
+/* ข้อความ error */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+/* ปุ่มค้นหา */
+.search-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #45a049;
+}
+
+/* ปุ่มเข้าสู่ระบบผู้ดูแลระบบ - in public folder */
+.admin-login-container {
+    margin-top: 20px;
+}
+
+.admin-login-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #008CBA;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.admin-login-btn:hover {
+    background-color: #007B9E;
+}
+
+/* จัดตำแหน่งให้ content อยู่ตรงกลาง */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ความสูงเต็มหน้าจอ */
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ฟอร์ม */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; /* ขนาดกว้างสุดของฟอร์ม */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Centered container for admin page */
+.admin-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.admin-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.admin-header h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.admin-header p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Action buttons section */
+.admin-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.action-btn, .logout-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.action-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.logout-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+/* add-parcel */
+
+/* Center the form container */
+.form-container-add-parcel {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-parcel h1 {
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+/* form-group */
+.form-group-add-parcel {
+    margin-bottom: 20px;
+}
+
+/* label */
+label-add-parcel {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* input */
+/* input-add-parcel[type="text"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+} */
+
+/* input-add-parcel[type="text"]:focus, textarea:focus, select:focus {
+    border-color: #4CAF50;
+} */
+
+/* textarea */
+textarea-add-parcel {
+    height: 100px;
+}
+
+/* button */
+button.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.success-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+/* add-parcel */
+
+
+/* ปุ่มย้อนกลับ */
+a.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.back-btn:hover {
+    background-color: #ddd;
+}
+/* ปุ่มย้อนกลับ */
+
+/* manage-parcel */
+/* เพิ่มสไตล์ให้หน้าเว็บดูสวยงาม */
+body.manage-parcel {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container สำหรับจัดระเบียบเนื้อหา */
+.container-manage-parcel {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header ส่วนบน */
+header.manage-parcel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* header.manage-parcel h1 {
+    font-size: 24px;
+    color: #4CAF50;
+} */
+
+.add-btn-manage-parcel {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.add-btn-manage-parcel:hover {
+    background-color: #45a049;
+}
+
+/* ตารางแสดงข้อมูล */
+table.manage-parcel {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table.manage-parcel th, table.manage-parcel td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table.manage-parcel th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table.manage-parcel tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.manage-parcel tr:hover {
+    background-color: #ddd;
+}
+
+/* ปุ่มแก้ไขและลบ */
+.edit-btn-manage-parcel, .delete-btn-manage-parcel {
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.edit-btn-manage-parcel {
+    background-color: #4CAF50;
+}
+
+.edit-btn-manage-parcel:hover {
+    background-color: #45a049;
+}
+
+.delete-btn-manage-parcel {
+    background-color: #f44336;
+}
+
+.delete-btn-manage-parcel:hover {
+    background-color: #e53935;
+}
+/* manage-parcel */
+
+/* edit */
+/* เพิ่มสไตล์ให้หน้าเว็บดูสวยงาม */
+body.edit-parcel {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container-edit-parcel {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header ส่วนบน */
+header.edit-parcel {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header.edit-parcel h1 {
+    font-size: 24px;
+    color: #e41f05;
+}
+
+/* ฟอร์มสำหรับแก้ไขสถานะ */
+.parcel-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group-edit-parcel {
+    margin-bottom: 15px;
+}
+
+.form-group-edit-parcel label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-group-edit-parcel input, .form-group-edit-parcel select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group-edit-parcel select {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+button.submit-btn-edit-parcel {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.submit-btn-edit-parcel:hover {
+    background-color: #45a049;
+}
+
+/* ปุ่มย้อนกลับ */
+.back-btn-edit-parcel {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-link-edit-parcel {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.back-link-edit-parcel:hover {
+    color: #45a049;
+}
+/* edit */
+
+/* home */
+a.back-to-home {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.back-to-home:hover {
+    background-color: #4CAF50;
+}
+
+.back-to-home {
+    color: #4CAF50;
+}
