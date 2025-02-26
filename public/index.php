@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container-home">
         <header>
             <h1>🔍 ค้นหาพัสดุ</h1>
         </header>
@@ -16,15 +16,15 @@
         <main>
             <!-- Form for tracking -->
             <div class="form-container">
-                <form action="track.php" method="GET">
+                <form action="track.php" method="GET" class="tracking-form">
                     <input type="text" name="tracking_number" placeholder="กรอกเลขพัสดุ" required>
                     <button type="submit" class="search-btn">ค้นหา</button>
                 </form>
             </div>
 
             <!-- Button to go to Admin Login -->
-            <div class="admin-login-container">
-                <a href="../admin/login.php" class="admin-login-btn">เข้าสู่ระบบผู้ดูแลระบบ</a>
+            <div class="admin-login">
+                <a href="../admin/login.php" class="login-link">เข้าสู่ระบบผู้ดูแลระบบ</a>
             </div>
         </main>
         

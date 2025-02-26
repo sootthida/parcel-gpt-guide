@@ -1,15 +1,18 @@
-/* style.css */
-
-/* รีเซ็ตค่าของ body และ html */
+/* === รีเซ็ตค่าของ body และ html === */
 html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100%;
-    background-color: #f4f4f9;
+    background-image: url('../images/winrina101.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
 }
 
-/* จัดการให้เนื้อหาตั้งอยู่ตรงกลาง */
+/* === จัดการให้เนื้อหาตั้งอยู่ตรงกลาง === */
 .container {
     display: flex;
     flex-direction: column;
@@ -19,537 +22,615 @@ html, body {
     text-align: center;
 }
 
-/* การจัดเรียงใน header */
+/* === Header === */
 header {
     margin-bottom: 30px;
 }
 
 h1 {
     font-size: 32px;
-    color: #333;
     margin: 0;
     padding: 0;
 }
 
-/* แบบฟอร์มค้นหาพัสดุ */
-.form-container {
-    margin-bottom: 20px;
-}
-
-/* input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    width: 250px;
-    transition: border-color 0.3s ease;
-} */
- 
-/* เปลี่ยนสีขอบเมื่อ focus */
-/* input[type="text"]:focus {
-    border-color: #4CAF50;
-} */
-
-
+/* === ฟอร์มและอินพุต === */
 input[type="text"], input[type="password"] {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 2px solid #ccc;
     border-radius: 5px;
-    margin-top: 5px;
     box-sizing: border-box;
     transition: border-color 0.3s;
 }
 
-input[type="text"]:focus, input[type="password"]:focus {
-    border-color: #4CAF50; /* เปลี่ยนสีขอบเมื่อ focus */
+input:focus {
+    border-color: #4CAF50;
 }
 
-/* ปุ่มเข้าสู่ระบบ */
-.login-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.login-btn:hover {
-    background-color: #45a049;
-}
-
-/* ข้อความ error */
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-
-/* ปุ่มค้นหา */
-.search-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-btn:hover {
-    background-color: #45a049;
-}
-
-/* ปุ่มเข้าสู่ระบบผู้ดูแลระบบ - in public folder */
-.admin-login-container {
-    margin-top: 20px;
-}
-
-.admin-login-btn {
+/* === ปุ่มทั่วไป === */
+button, .btn {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+/* === ปุ่มหลัก === */
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+/* === ปุ่มรอง === */
+.btn-secondary {
     background-color: #008CBA;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-    transition: background-color 0.3s ease;
 }
 
-.admin-login-btn:hover {
+.btn-secondary:hover {
     background-color: #007B9E;
 }
 
-/* จัดตำแหน่งให้ content อยู่ตรงกลาง */
+/* === ปุ่มลบ === */
+.btn-danger {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #e53935;
+}
+
+/* === กล่องเข้าสู่ระบบ === */
 .login-container {
+    background-image: url('../images/galaxy.jpg');
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* ความสูงเต็มหน้าจอ */
-    text-align: center;
-    background-color: #fff;
+    height: 100vh;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ฟอร์ม */
+.text-title-login {
+    font-size: 32px;
+    color: white;
+}
+
 .login-form {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    max-width: 400px; /* ขนาดกว้างสุดของฟอร์ม */
-    background-color: #fff;
+    max-width: 400px;
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-label {
-    font-size: 16px;
-    color: #333;
-}
-
-/* Footer */
+/* === Footer === */
 footer {
     margin-top: 30px;
     font-size: 14px;
     color: #777;
+    text-align: center;
 }
 
-footer p {
-    margin: 0;
-}
-
-/* Centered container for admin page */
-.admin-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
+/* === ตารางข้อมูล === */
+table {
+    width: 100%;
+    border-collapse: collapse;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Header styles */
-.admin-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.admin-header h1 {
-    font-size: 28px;
-    color: #333;
-}
-
-.admin-header p {
-    font-size: 18px;
-    color: #666;
-}
-
-/* Action buttons section */
-.admin-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.action-btn, .logout-btn {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 18px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    width: 200px;
-}
-
-.action-btn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.action-btn:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-.logout-btn {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.logout-btn:hover {
-    background-color: #e53935;
-    transform: scale(1.05);
-}
-
-/* add-parcel */
-
-/* Center the form container */
-.form-container-add-parcel {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.add-parcel h1 {
-    font-size: 28px;
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-
-/* form-group */
-.form-group-add-parcel {
-    margin-bottom: 20px;
-}
-
-/* label */
-label-add-parcel {
-    font-size: 16px;
-    color: #333;
-    display: block;
-    margin-bottom: 8px;
-}
-
-/* input */
-/* input-add-parcel[type="text"], textarea, select {
-    width: 100%;
+table th, table td {
     padding: 12px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    transition: border-color 0.3s;
-} */
-
-/* input-add-parcel[type="text"]:focus, textarea:focus, select:focus {
-    border-color: #4CAF50;
-} */
-
-/* textarea */
-textarea-add-parcel {
-    height: 100px;
+    text-align: left;
+    border: 1px solid #ddd;
 }
 
-/* button */
-button.submit-btn {
-    width: 100%;
-    padding: 14px;
+table th {
     background-color: #4CAF50;
     color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
-button.submit-btn:hover {
-    background-color: #45a049;
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-.success-message {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 20px;
+table tr:hover {
+    background-color: #ddd;
 }
-/* add-parcel */
 
-
-/* ปุ่มย้อนกลับ */
-a.back-btn {
+/* === ปุ่มย้อนกลับ === */
+.back-btn {
     display: inline-block;
     padding: 10px 20px;
-    margin-top: 20px;
     text-align: center;
     text-decoration: none;
     background-color: #f1f1f1;
     color: #333;
-    font-size: 16px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-a.back-btn:hover {
+.back-btn:hover {
     background-color: #ddd;
 }
-/* ปุ่มย้อนกลับ */
-
-/* manage-parcel */
-/* เพิ่มสไตล์ให้หน้าเว็บดูสวยงาม */
-body.manage-parcel {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
+/* === หน้า index === */
+.container-home {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.admin-login {
+    text-align: center;
+    margin-top: 20px;
+}
+.login-link {
+    font-size: 1.1rem;
+    color: #007BFF;
+    text-decoration: none;
 }
 
-/* Container สำหรับจัดระเบียบเนื้อหา */
-.container-manage-parcel {
-    width: 80%;
-    margin: 0 auto;
+.login-link:hover {
+    text-decoration: underline;
+}
+/* === หน้า index === */
+
+/* === หน้า Track Page === */
+.container-track-user {
+    background-color: #f4f4f4;
+    text-align: center;
     padding: 20px;
 }
 
-/* Header ส่วนบน */
-header.manage-parcel {
+.status-table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 80%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.status-label {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.tracking-form {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* ปรับระยะห่างระหว่างช่องกรอกกับปุ่ม */
+}
+
+.tracking-form input {
+    flex: 1; /* ให้ช่องกรอกขยายได้ */
+    max-width: 300px; /* จำกัดขนาดไม่ให้กว้างเกินไป */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tracking-form .search-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tracking-form .search-btn:hover {
+    background-color: #0056b3;
+}
+
+.back-btn-track-user {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #007BFF;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn-track-user:hover {
+    background-color: #007BFF;
+    color: white;
+}
+/* === หน้า Track Page === */
+
+/* === หน้า login === */
+.back-btn-track-user {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #007BFF;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn-track-user:hover {
+    background-color: #007BFF;
+    color: white;
+}
+.login-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.login-btn:hover {
+    background-color: #46bc45;
+    color: white;
+}
+/* === หน้า login === */
+
+/* === หน้า admin === */
+
+/* Main container for admin dashboard */
+.admin-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.admin-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.admin-header h1 {
+    font-size: 2.5rem;
+    color: #007BFF;
+}
+
+.admin-header p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+.admin-actions {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.action-btn, .logout-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    width: 200px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-btn:hover, .logout-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.action-add-btn, .logout-btn {
+    background-color: #1f8d10;
+    color: rgb(255, 255, 255);
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    width: 200px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-add-btn:hover, .logout-btn:hover {
+    background-color: #184f0f;
+    transform: translateY(-2px);
+}
+.logout-btn {
+    background-color: #dc3545;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+/* === หน้า admin === */
+
+/* === add-parcel === */
+
+.form-container-add-parcel {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.add-parcel-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.add-parcel-header h1 {
+    font-size: 2.5rem;
+    color: #007BFF;
+}
+.parcel-form .form-group {
+    margin-bottom: 20px;
+}
+
+.parcel-form label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.parcel-form input, .parcel-form textarea, .parcel-form select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.parcel-form textarea {
+    height: 100px;
+}
+
+.parcel-form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.parcel-form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.parcel-form a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.parcel-form a:hover {
+    color: #0056b3;
+}
+/* === add-parcel === */
+
+/* === mange-parcel === */
+.container-manage-parcel {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.manage-parcel-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
 
-/* header.manage-parcel h1 {
-    font-size: 24px;
-    color: #4CAF50;
-} */
-
+.manage-parcel-header h1 {
+    font-size: 2rem;
+    color: #000000;
+}
 .add-btn-manage-parcel {
-    padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #28a745;
     color: white;
-    text-decoration: none;
-    font-size: 16px;
+    padding: 10px 20px;
     border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
 }
 
 .add-btn-manage-parcel:hover {
-    background-color: #45a049;
+    background-color: #218838;
 }
-
-/* ตารางแสดงข้อมูล */
-table.manage-parcel {
+.parcel-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-table.manage-parcel th, table.manage-parcel td {
+.parcel-table th, .parcel-table td {
     padding: 12px;
     text-align: left;
     border: 1px solid #ddd;
 }
 
-table.manage-parcel th {
-    background-color: #4CAF50;
+.parcel-table th {
+    background-color: #007BFF;
     color: white;
 }
 
-table.manage-parcel tr:nth-child(even) {
-    background-color: #f2f2f2;
+.parcel-table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-table.manage-parcel tr:hover {
-    background-color: #ddd;
+.parcel-table tr:hover {
+    background-color: #f1f1f1;
+}
+.edit-btn, .delete-btn {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
-/* ปุ่มแก้ไขและลบ */
-.edit-btn-manage-parcel, .delete-btn-manage-parcel {
-    padding: 6px 12px;
+.edit-btn:hover {
+    text-decoration: underline;
+}
+.delete-btn {
+    color: #dc3545;
+}
+
+.delete-btn:hover {
+    text-decoration: underline;
+}
+.manage-back-btn {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    color: white;
+    margin-top: 20px;
 }
 
-.edit-btn-manage-parcel {
-    background-color: #4CAF50;
+.manage-back-btn:hover {
+    background-color: #5a6268;
 }
+/* === mange-parcel === */
 
-.edit-btn-manage-parcel:hover {
-    background-color: #45a049;
-}
-
-.delete-btn-manage-parcel {
-    background-color: #f44336;
-}
-
-.delete-btn-manage-parcel:hover {
-    background-color: #e53935;
-}
-/* manage-parcel */
-
-/* edit */
-/* เพิ่มสไตล์ให้หน้าเว็บดูสวยงาม */
-body.edit-parcel {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
+/* === edit-parcel === */
 .container-edit-parcel {
-    width: 70%;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
     padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
-
-/* Header ส่วนบน */
-header.edit-parcel {
+.edit-parcel-header {
     text-align: center;
     margin-bottom: 20px;
 }
 
-header.edit-parcel h1 {
-    font-size: 24px;
-    color: #e41f05;
+.edit-parcel-header h1 {
+    font-size: 2rem;
+    color: #007BFF;
 }
 
-/* ฟอร์มสำหรับแก้ไขสถานะ */
-.parcel-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.parcel-form-edit {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .form-group-edit-parcel {
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group-edit-parcel label {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
 }
 
-.form-group-edit-parcel input, .form-group-edit-parcel select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
+.form-group-edit-parcel input,
 .form-group-edit-parcel select {
-    background-color: #fff;
-    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #f9f9f9;
 }
 
-button.submit-btn-edit-parcel {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+.form-group-edit-parcel input:disabled {
+    background-color: #e9ecef;
+}
+
+.submit-btn-edit-parcel {
+    padding: 12px;
+    background-color: #007BFF;
     color: white;
-    font-size: 18px;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-button.submit-btn-edit-parcel:hover {
-    background-color: #45a049;
+.submit-btn-edit-parcel:hover {
+    background-color: #0056b3;
 }
 
-/* ปุ่มย้อนกลับ */
+.success-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
 .back-btn-edit-parcel {
     margin-top: 20px;
     text-align: center;
 }
 
 .back-link-edit-parcel {
-    text-decoration: none;
-    color: #4CAF50;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.back-link-edit-parcel:hover {
-    color: #45a049;
-}
-/* edit */
-
-/* home */
-a.back-to-home {
-    display: inline-block;
     padding: 10px 20px;
-    margin-top: 20px;
-    text-align: center;
+    background-color: #6c757d;
+    color: white;
+    font-size: 1rem;
     text-decoration: none;
-    background-color: #4CAF50;
-    color: #ffffff;
-    font-size: 16px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-a.back-to-home:hover {
-    background-color: #4CAF50;
+.back-link-edit-parcel:hover {
+    background-color: #5a6268;
 }
-
-.back-to-home {
-    color: #4CAF50;
-}
+/* === edit-parcel === */

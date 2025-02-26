@@ -33,38 +33,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="form-container-add-parcel">
-        <div class="add-parcel">
+        <div class="add-parcel-header">
             <h1>📦 เพิ่มข้อมูลพัสดุ</h1>
         </div>
-        <form method="POST">
-            <div class="form-group-add-parcel">
-                <label-add-parcel for="tracking_number">เลขพัสดุ:</label-add-parcel>
+        <form method="POST" class="parcel-form">
+            <div class="form-group">
+                <label for="tracking_number">เลขพัสดุ:</label>
                 <input type="text" id="tracking_number" name="tracking_number" placeholder="กรอกเลขพัสดุ" required>
             </div>
 
-            <div class="form-group-add-parcel">
-                <label-add-parcel for="sender_name">ชื่อผู้ส่ง:</label-add-parcel>
-                
+            <div class="form-group">
+                <label for="sender_name">ชื่อผู้ส่ง:</label>
                 <input type="text" id="sender_name" name="sender_name" placeholder="กรอกชื่อผู้ส่ง" required>
             </div>
 
-            <div class="form-group-add-parcel">
-                <label-add-parcel for="sender_address">ที่อยู่ผู้ส่ง:</label-add-parcel>
+            <div class="form-group">
+                <label for="sender_address">ที่อยู่ผู้ส่ง:</label>
                 <textarea id="sender_address" name="sender_address" placeholder="กรอกที่อยู่ผู้ส่ง" required></textarea>
             </div>
 
-            <div class="form-group-add-parcel">
-                <label-add-parcel for="receiver_name">ชื่อผู้รับ:</label-add-parcel>
+            <div class="form-group">
+                <label for="receiver_name">ชื่อผู้รับ:</label>
                 <input type="text" id="receiver_name" name="receiver_name" placeholder="กรอกชื่อผู้รับ" required>
             </div>
 
-            <div class="form-group-add-parcel">
-                <label-add-parcel for="receiver_address">ที่อยู่ผู้รับ:</label-add-parcel>
+            <div class="form-group">
+                <label for="receiver_address">ที่อยู่ผู้รับ:</label>
                 <textarea id="receiver_address" name="receiver_address" placeholder="กรอกที่อยู่ผู้รับ" required></textarea>
             </div>
 
-            <div class="form-group-add-parcel">
-                <label-add-parcel for="vehicle">ประเภทการขนส่ง:</label-add-parcel>
+            <div class="form-group">
+                <label for="vehicle">ประเภทการขนส่ง:</label>
                 <select id="vehicle" name="vehicle">
                     <option value="รถยนต์">รถยนต์</option>
                     <option value="เครื่องบิน">เครื่องบิน</option>
@@ -72,7 +71,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <button type="submit" class="submit-btn">บันทึกข้อมูล</button>
-            <!-- ปุ่มย้อนกลับไปยังหน้าแสดงรายการพัสดุ -->
             <a href="manage_parcels.php" class="back-btn">ย้อนกลับไปยังหน้ารายการพัสดุ</a>
         </form>
     </div>

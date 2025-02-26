@@ -21,8 +21,8 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
         </div>
         
         <div class="admin-actions">
-            <a href="add_parcel.php" class="action-btn">เพิ่มพัสดุ</a>
-            <a href="manage_parcels.php" class="action-btn">จัดการพัสดุ (CRUD)</a>
+            <a href="add_parcel.php" class="action-add-btn">เพิ่มพัสดุ</a>
+            <a href="manage_parcels.php" class="action-btn">จัดการพัสดุ</a>
             <a href="logout.php" class="logout-btn">ออกจากระบบ</a>
         </div>
     </div>

@@ -21,14 +21,12 @@ $result = $conn->query($sql);
 </head>
 <body class="manage-parcel">
     <div class="container-manage-parcel">
-        <header class="manage-parcel">
-            <!-- <div class="manage-parcel">
-            </div> -->
-                <h1>📦 จัดการพัสดุ</h1>
+        <header class="manage-parcel-header">
+            <h1>📦 จัดการพัสดุ</h1>
             <a href="add_parcel.php" class="add-btn-manage-parcel">เพิ่มข้อมูลพัสดุใหม่</a>
         </header>
 
-        <table class="manage-parcel">
+        <table class="parcel-table">
             <thead>
                 <tr>
                     <th>เลขพัสดุ</th>
@@ -46,16 +44,15 @@ $result = $conn->query($sql);
                         <td><?= $parcel['receiver_name'] ?></td>
                         <td><?= $parcel['status'] ?></td>
                         <td>
-                            <a href="edit_parcel.php?id=<?= $parcel['id'] ?>" class="edit-btn-manage-parcel">✒️</a> |
-                            <a href="delete_parcel.php?id=<?= $parcel['id'] ?>" class="delete-btn-manage-parcel" onclick="return confirm('คุณต้องการลบพัสดุนี้ใช่หรือไม่?')">ลบ</a>
+                            <a href="edit_parcel.php?id=<?= $parcel['id'] ?>" class="edit-btn">✒️ แก้ไข</a> |
+                            <a href="delete_parcel.php?id=<?= $parcel['id'] ?>" class="delete-btn" onclick="return confirm('คุณต้องการลบพัสดุนี้ใช่หรือไม่?')">ลบ</a>
                         </td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>
         </table>
-        
-        <!-- ปุ่มย้อนกลับไปยังหน้าแสดงรายการพัสดุ -->
-        <a href="admin.php" class="back-to-home">ย้อนกลับไปยังหน้าหลัก</a>
+
+        <a href="admin.php" class="manage-back-btn">ย้อนกลับไปยังหน้าหลัก</a>
     </div>
 </body>
 </html>

@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("si", $status, $id);
     $stmt->execute();
 
-    echo "✅ อัปเดตสถานะพัสดุสำเร็จ!";
+    echo "<div class='success-message'>✅ อัปเดตสถานะพัสดุสำเร็จ!</div>";
 }
 ?>
 
@@ -36,11 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body class="edit-parcel">
     <div class="container-edit-parcel">
-        <header class="edit-parcel">
+        <header class="edit-parcel-header">
             <h1>🛠️ แก้ไขสถานะพัสดุ</h1>
         </header>
 
-        <form method="POST" class="parcel-form">
+        <form method="POST" class="parcel-form-edit">
             <div class="form-group-edit-parcel">
                 <label for="tracking_number">เลขพัสดุ:</label>
                 <input type="text" id="tracking_number" name="tracking_number" value="<?= $parcel['tracking_number'] ?>" disabled>
