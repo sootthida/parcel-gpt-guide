@@ -23,6 +23,8 @@ $result = $conn->query($sql);
     <div class="container-manage-parcel">
         <header class="manage-parcel-header">
             <h1>📦 จัดการพัสดุ</h1>
+            <!-- SCAN DUBUG -->
+            <a href="add_parcel.php" class="add-btn-manage-parcel">SCAN</a> 
             <a href="add_parcel.php" class="add-btn-manage-parcel">เพิ่มข้อมูลพัสดุใหม่</a>
         </header>
 
